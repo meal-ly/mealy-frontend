@@ -1,0 +1,26 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+      "curly": true,
+      "no-empty-interface": false,
+      "object-literal-sort-keys": false,
+      "await-promise": true,
+      "interface-name": false,
+      "no-namespace": false,
+      "ordered-imports": false,
+      "interface-over-type-literal": false,
+      "no-bitwise": false
+    },
+    "jsRules": {
+      "curly": true
+    },
+    "rulesDirectory": [],
+    "defaultSeverity": "warn",
+    "linterOptions": {
+      "exclude": [
+        "**/tsconfig.json",
+        "src/**/*.json"
+      ]
+    }
+  }
+  
