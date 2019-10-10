@@ -5,9 +5,11 @@ import { ILayoutProps } from "./types";
 import "./styles.scss";
 
 const Layout = ({ children }: ILayoutProps) => (
-  <div className="App">
-    <Header />
-    {children}
+  <div className="app">
+    <div className="content">
+      <Header />
+      {children}
+    </div>
     <Footer />
   </div>
 );
