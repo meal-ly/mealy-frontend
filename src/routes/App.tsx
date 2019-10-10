@@ -8,14 +8,16 @@ import NotFound from "../components/NotFound";
 
 const App = () => (
   <BrowserRouter>
-    <Layout>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route component={NotFound} />
-      </Switch>
-    </Layout>
+    <Route render={({ location }) =>
+      <Layout location={location}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
+  }/>
   </BrowserRouter>
 );
 
