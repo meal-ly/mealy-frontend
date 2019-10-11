@@ -1,6 +1,7 @@
 import * as path from "path";
 import * as HtmlWebPackPlugin from "html-webpack-plugin";
 import * as MiniCssExtractPlugin from "mini-css-extract-plugin";
+import * as CopyWebpackPlugin from "copy-webpack-plugin";
 
 module.exports = {
   entry: "./index.tsx",
@@ -70,5 +71,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "assets/[name].css",
     }),
+    new CopyWebpackPlugin([
+      { from: "src/assets", to: "assets" },
+    ]),
   ],
 };

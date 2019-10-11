@@ -29,6 +29,7 @@
     "webpack-dev-server": "^3.7.1"
   },
   "devDependencies": {
+    "@types/copy-webpack-plugin": "^5.0.0",
     "@types/history": "^4.7.3",
     "@types/html-webpack-plugin": "^3.2.1",
     "@types/mini-css-extract-plugin": "^0.8.0",
@@ -36,6 +37,8 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-router-dom": "^5.1.0",
     "@types/react-transition-group": "^4.2.3",
+    "@types/webpack": "^4.39.3",
+    "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.0.0",
     "file-loader": "^4.0.0",
     "mini-css-extract-plugin": "^0.7.0",

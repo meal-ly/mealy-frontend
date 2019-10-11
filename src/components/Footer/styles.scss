@@ -1,4 +1,6 @@
 footer {
   flex-shrink: 0;
-  background-color: tomato;
+  background-color: var(--red);
+  height: 45px;
+  padding-top: 4px; 
 }
