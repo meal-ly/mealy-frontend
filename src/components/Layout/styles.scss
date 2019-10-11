@@ -9,7 +9,7 @@
 body {
   margin: 0;
   font-family: Arial;
-  background-color: skyblue;
+  background-color: var(--white);
 }
 
 * {
@@ -52,6 +52,6 @@ body {
 }
 
 .container{
-  width: 90vw;
+  width: 75vw;
   margin: 0 auto;
 }

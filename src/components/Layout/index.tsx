@@ -8,7 +8,7 @@ import "./styles.scss";
 const Layout = ({ children, location }: ILayoutProps) => (
   <div className="app">
     <div className="content">
-      <Header />
+      <Header location={location} />
       <TransitionGroup exit={false}>
         <CSSTransition key={location.pathname.split("/")[1]} timeout={250} classNames="fade">
           {children}
