@@ -1,0 +1,32 @@
+header {
+  justify-content: space-between !important;
+  padding: 33px 0;
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    transition: 0.3s;
+    color: var(--red);
+    margin: 0;
+  }
+
+  svg {
+    fill: var(--red);
+    transition: 0.3s;
+    margin-right: 5px;
+  }
+
+  .link-container {
+    height: 24px;
+  }
+
+  .link-container:hover {
+    p {
+      color: var(--green);
+    }
+    svg {
+      fill: var(--green);
+    }
+  }
+}
