@@ -6,9 +6,45 @@
   --white: #FFFFFF;
 }
 
+/* Fonts */
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../../assets/fonts/Raleway-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../../assets/fonts/Raleway-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../../assets/fonts/Raleway-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../../assets/fonts/Raleway-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(../../assets/fonts/Montserrat-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(../../assets/fonts/Montserrat-Medium.ttf) format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(../../assets/fonts/Montserrat-Regular.ttf) format('truetype');
+  font-weight: 700;
+}
+
 body {
   margin: 0;
-  font-family: Arial;
   background-color: var(--white);
 }
 

@@ -58,6 +58,15 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(woff|woff2|ttf|otf)$/,
+        loader: "file-loader",
+        include: [/fonts/],
+        options: {
+          name: "[name].[ext]",
+          outputPath: "fonts/",
+        },
+      },
     ],
   },
   devServer: {
