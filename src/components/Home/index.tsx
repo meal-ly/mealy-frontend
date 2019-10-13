@@ -6,11 +6,11 @@ import "./styles.scss";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <About />
       <HowItWorks />
       <Plans />
-    </>
+    </div>
   );
 };
 

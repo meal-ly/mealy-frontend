@@ -1,5 +1,26 @@
 .about {
-
+  position: relative;
+  justify-content: space-between !important;
+  margin-top: 50px !important;
+  margin-bottom: 83px !important;
+  .about-info{
+    width: 570px;
+    padding-left: 31px;
+    .animated{
+      color: var(--red);
+    }
+  }
+  .box {
+    position: absolute;
+    left: 0px;
+    width: 6px;
+    height: 235px;
+    background-color: var(--green);
+  }
+  .about-text{
+    width: 414px;
+    margin: 14px 0;
+  }
 }
 
 .works {

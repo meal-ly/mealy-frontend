@@ -91,3 +91,20 @@ body {
   width: 75vw;
   margin: 0 auto;
 }
+
+.title-big {
+  margin: 0;
+  color: var(--green);
+  font-family: 'Raleway';
+  font-size: 51px;
+  font-weight: 800;
+}
+
+.text-medium {
+  margin: 0;
+  color: var(--gray);
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 17px;
+  text-align: left;
+}

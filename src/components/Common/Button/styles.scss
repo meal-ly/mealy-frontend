@@ -1,0 +1,20 @@
+.button {
+  border-radius: 7px;
+  width: 190px;
+  height: 33px;
+  background: transparent linear-gradient(90deg, #8DCB77 0%, #8AC674 55%, #6DA258 100%) 0% 0% no-repeat padding-box;
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  transition: .2s;
+  will-change:transform;
+  font-family: 'Raleway';
+  font-size: 17px;
+  font-weight: 700;
+
+  &:active{
+    transform: scale(.9);
+  }
+}

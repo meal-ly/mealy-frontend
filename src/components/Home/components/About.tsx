@@ -1,8 +1,28 @@
 import * as React from "react";
+import Button from "../../Common/Button/";
 
 const About = () =>
   <section className="about row container">
-    Acá va el About
+    <div className="box"></div>
+    <div className="about-info">
+      <h1 className="title-big">
+        Mealy es tu&nbsp;
+        <span className="animated">
+          Desayuno
+        </span>
+      </h1>
+      <p className="text-medium about-text">
+        Las mejores recetas, los mejores ingredientes, en la puerta de tu casa.
+      </p>
+      <Button>
+        ¡Empieza Ahora!
+      </Button>
+    </div>
+    <img
+      src="/assets/dummy1.png"
+      alt="about"
+      width="348"
+    />
   </section>;
 
 export default About;
