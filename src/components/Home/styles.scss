@@ -24,7 +24,23 @@
 }
 
 .works {
+  margin-top: 30px !important;
+}
 
+.step-details {
+  margin: 46px 0 61px 0;
+  align-items: flex-start !important;
+  .step-detail{
+    width: 200px;
+    margin: 0 23px;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+  p {
+    text-align: center !important;
+    margin: 3px 0;
+  }
 }
 
 .plans {

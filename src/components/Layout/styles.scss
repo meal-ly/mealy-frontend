@@ -100,11 +100,51 @@ body {
   font-weight: 800;
 }
 
+.title {
+  margin: 0;
+  color: var(--red);
+  font-family: 'Raleway';
+  font-size: 38px;
+  font-weight: 800;
+  position: relative;
+  &::after {
+    display: block;
+    content: '';
+    width: 40%;
+    height: 4px;
+    background: var(--red);
+    position: absolute;
+    left:0;
+    right:0;
+    margin-top: 6px;
+    margin-left:auto;
+    margin-right:auto;
+   }
+}
+
+.title-small {
+  margin: 0;
+  color: var(--gray);
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+}
+
 .text-medium {
   margin: 0;
   color: var(--gray);
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 17px;
+  text-align: left;
+}
+
+.text-small {
+  margin: 0;
+  color: var(--gray);
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 13px;
   text-align: left;
 }
