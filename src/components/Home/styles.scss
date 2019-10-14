@@ -1,11 +1,82 @@
 .about {
-
+  position: relative;
+  justify-content: space-between !important;
+  margin-top: 50px !important;
+  margin-bottom: 83px !important;
+  .about-info{
+    width: 570px;
+    padding-left: 31px;
+    .animated{
+      color: var(--red);
+    }
+  }
+  .box {
+    position: absolute;
+    left: 0px;
+    width: 6px;
+    height: 235px;
+    background-color: var(--green);
+  }
+  .about-text{
+    width: 414px;
+    margin: 14px 0;
+  }
 }
 
 .works {
+  margin-top: 30px !important;
+}
 
+.step-details {
+  margin: 46px 0 61px 0;
+  align-items: flex-start !important;
+  .step-detail{
+    width: 200px;
+    margin: 0 23px;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+  p {
+    text-align: center !important;
+    margin: 3px 0;
+  }
 }
 
 .plans {
   background-color: var(--green);
+  h2 {
+    color: var(--white) !important;
+    margin-top: 38px;
+  }
+  .title::after {
+    background: var(--white) !important;
+  }
+}
+
+.plan-cards{
+  width: 550px;
+  justify-content: space-between !important;
+}
+
+.card-detail {
+  background-color: var(--white);
+  width: 240px;
+  height: 295px;
+  border-radius: 28px;
+  box-shadow: 0px 6px 10px #0000004D;
+  margin: 47px 0 62px 0;
+  
+  .card-detail-content{
+    justify-content: flex-start !important;
+    height: 190px; 
+    margin-bottom: 19px;
+  }
+  .title-small {
+    margin: 19px 0 5px 0;
+  }
+  p {
+    width: 200px;
+    text-align: center;
+  }
 }
