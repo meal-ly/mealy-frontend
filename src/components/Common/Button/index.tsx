@@ -3,10 +3,11 @@ import "./styles.scss";
 
 interface IButtonProps {
   children: string;
+  variant: string;
 }
 
-const Button = ({ children }: IButtonProps) =>
-  <button className="button" type="button">
+const Button = ({ children, variant }: IButtonProps) =>
+  <button className={variant} type="button">
     {children}
   </button>;
 

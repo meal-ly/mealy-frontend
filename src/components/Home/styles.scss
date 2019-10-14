@@ -45,4 +45,38 @@
 
 .plans {
   background-color: var(--green);
+  h2 {
+    color: var(--white) !important;
+    margin-top: 38px;
+  }
+  .title::after {
+    background: var(--white) !important;
+  }
+}
+
+.plan-cards{
+  width: 550px;
+  justify-content: space-between !important;
+}
+
+.card-detail {
+  background-color: var(--white);
+  width: 240px;
+  height: 295px;
+  border-radius: 28px;
+  box-shadow: 0px 6px 10px #0000004D;
+  margin: 47px 0 62px 0;
+  
+  .card-detail-content{
+    justify-content: flex-start !important;
+    height: 190px; 
+    margin-bottom: 19px;
+  }
+  .title-small {
+    margin: 19px 0 5px 0;
+  }
+  p {
+    width: 200px;
+    text-align: center;
+  }
 }

@@ -14,7 +14,7 @@ const About = () =>
       <p className="text-medium about-text">
         Las mejores recetas, los mejores ingredientes, en la puerta de tu casa.
       </p>
-      <Button>
+      <Button variant="classic">
         ¡Empieza Ahora!
       </Button>
     </div>
