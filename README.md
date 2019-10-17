@@ -1,4 +1,4 @@
-<h1 align="center">Spoke</h1>
+<h1 align="center">Mealy Frontend</h1>
 
 <p align="center">
  <img src="./src/assets/logo_small.png" alt="mealy-logo">
@@ -17,7 +17,7 @@ Then open **http://localhost:8080**
 
 - `yarn build`
 
-Production files will be on `dist` folder-
+Production files will be on `dist` folder
 
 ## SVG handling
 
