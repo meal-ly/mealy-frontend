@@ -25,6 +25,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.1.2",
     "react-transition-group": "^4.3.0",
+    "react-typed": "^1.2.0",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.7.1"
