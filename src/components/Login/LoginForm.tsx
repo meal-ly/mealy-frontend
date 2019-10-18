@@ -37,22 +37,38 @@ const LoginForm = () => (
         isSubmitting,
       }) => (
         <form onSubmit={handleSubmit} className="column">
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && errors.email}
+          <div className="input-container column">
+            <label className="form-label">
+              Ingresa tu correo electrónico
+            </label>
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.email}
+              placeholder="example@mail.com"
+            />
+            {errors.email && touched.email &&
+              <label className="form-label">
+                {errors.email}
+              </label>
+            }
+          </div>
+          <label className="form-label">
+            Ingresa tu contraseña
+          </label>
           <input
             type="password"
             name="password"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.password}
+            placeholder="***********"
           />
-          {errors.password && touched.password && errors.password}
+          <p className="form-label">
+            ¿Olvidaste tu contraseña?
+          </p>
           <Button variant="rounded">
             Inicia sesión
           </Button>

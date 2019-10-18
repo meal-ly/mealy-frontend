@@ -11,12 +11,18 @@ const Login = () => {
           alt="login_img"
           width="96"
         />
-        <p>¡Bienvenido!</p>
+        <p className="login-welcome">
+          ¡Bienvenido!
+        </p>
         <LoginForm />
-        <p>¿Eres nuevo? ¡No te preocupes!</p>
-        <p>
-          Crea tu cuenta
-          <span>aquí</span>
+        <p className="login-new">
+          ¿Eres nuevo? ¡No te preocupes!
+        </p>
+        <p className="login-create">
+          Crea tu cuenta&nbsp;
+          <span>
+            <strong>aquí</strong>
+          </span>
         </p>
       </div>
     </div>
