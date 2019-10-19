@@ -39,13 +39,17 @@
 }
 @font-face {
   font-family: 'Montserrat';
-  src: local('Montserrat'), url(../../assets/fonts/Montserrat-Regular.ttf) format('truetype');
+  src: local('Montserrat'), url(../../assets/fonts/Montserrat-Bold.ttf) format('truetype');
   font-weight: 700;
 }
 
 body {
   margin: 0;
   background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
 }
 
 * {
