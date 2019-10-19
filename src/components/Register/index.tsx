@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./styles.scss";
 import LoginForm from "./RegisterForm";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -18,7 +19,9 @@ const Login = () => {
         <p className="login-create">
           Ya tienes una cuenta?&nbsp;
           <span>
-            <strong>Entra aquí</strong>
+            <Link to="/login">
+              <strong>Entra aquí</strong>
+            </Link>
           </span>
         </p>
       </div>
