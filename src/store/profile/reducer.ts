@@ -22,6 +22,7 @@ const profileReducer = reducerWithInitialState(initialState)
     return {
       ...state,
       isLoadingProfile: false,
+      isLoggedIn: true,
       user,
     };
   });

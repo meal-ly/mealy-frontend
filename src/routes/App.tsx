@@ -1,13 +1,21 @@
 import * as React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { ConnectedRouter } from "connected-react-router";
+import { History } from "history";
 import Home from "../components/Home";
 import Layout from "../components/Layout";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import NotFound from "../components/NotFound";
+import { MealyStore } from "../store/types";
 
-const App = () => (
-  <BrowserRouter>
+interface AppProps {
+  browserHistory: History<any>;
+  store: MealyStore;
+}
+
+const App = ({ browserHistory }: AppProps) => (
+  <ConnectedRouter history={browserHistory}>
     <Route render={({ location }) =>
       <Layout location={location}>
         <Switch>
@@ -18,7 +26,7 @@ const App = () => (
         </Switch>
       </Layout>
   }/>
-  </BrowserRouter>
+  </ConnectedRouter>
 );
 
 export default App;
