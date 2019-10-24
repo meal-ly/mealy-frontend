@@ -6,9 +6,9 @@ import thunkMiddleware, { ThunkMiddleware } from "redux-thunk";
 import { AnyAction } from "typescript-fsa";
 import { History } from "history";
 import { buildRootReducer } from "./reducers";
-import { IAppState, PCCStore } from "./types";
+import { IAppState, MealyStore } from "./types";
 
-const configureStore = (browserHistory: History): PCCStore => {
+const configureStore = (browserHistory: History): MealyStore => {
   const rootReducer = buildRootReducer(browserHistory);
 
   const thunk: ThunkMiddleware<IAppState, AnyAction> = thunkMiddleware;

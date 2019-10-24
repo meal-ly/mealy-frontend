@@ -36,7 +36,7 @@ const LoginForm = () => (
         handleSubmit,
         isSubmitting,
       }) => (
-        <form onSubmit={handleSubmit} className="column">
+        <form className="column">
           <div className="input-container column">
             <label className="form-label">
               Ingresa tu correo electrónico
@@ -69,7 +69,7 @@ const LoginForm = () => (
           <p className="form-label">
             ¿Olvidaste tu contraseña?
           </p>
-          <Button variant="rounded">
+          <Button variant="rounded" onClick={handleSubmit}>
             Inicia sesión
           </Button>
         </form>

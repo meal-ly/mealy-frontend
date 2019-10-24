@@ -15,12 +15,12 @@ const About = () =>
       <p className="text-medium about-text">
         Las mejores recetas, los mejores ingredientes, en la puerta de tu casa.
       </p>
-      <Button variant="classic">
+      <Button variant="classic" onClick={() => null}>
         ¡Empieza Ahora!
       </Button>
     </div>
     <img
-      src="/assets/dummy1.png"
+      src="/assets/breakfast.png"
       alt="about"
       width="348"
     />
