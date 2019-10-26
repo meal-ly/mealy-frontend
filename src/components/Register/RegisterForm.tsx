@@ -98,7 +98,7 @@ const LoginForm = () => (
             }
           </div>
 
-          <Button variant="rounded">
+          <Button variant="rounded" onClick={() => null}>
             Crear Cuenta
           </Button>
         </form>

@@ -19,7 +19,7 @@ const PlanCard = ({ imgUrl, title, text }: IPlanCard) =>
       <p className="title-small">{title}</p>
       <p className="text-small">{text}</p>
     </div>
-    <Button variant="rounded">
+    <Button variant="rounded" onClick={() => null}>
       Inicia tu plan
     </Button>
   </div>;
