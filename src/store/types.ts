@@ -4,9 +4,11 @@ import { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "typescript-fsa";
 
 import { IProfileReducerState } from "./profile/types";
+import { IDashboardReducerState } from "./dashboard/types";
 
 export interface IAppState {
   profile: IProfileReducerState;
+  dashboard: IDashboardReducerState;
   router: RouterState;
 }
 
