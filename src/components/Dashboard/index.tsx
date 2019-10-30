@@ -5,12 +5,19 @@ import "./styles.scss";
 import Tags from "./components/Tags";
 
 const Dashboard = () => {
+  const [search, setSearch] = React.useState("");
   return (
     <div className="container column dashboard">
       <h2 className="title">
         Busca tu receta por categoría
       </h2>
       <Tags />
+      <input
+        name="text"
+        onChange={(e) => setSearch(e.target.value)}
+        value={search}
+        placeholder="Busca aquí la receta que viste el otro día :)"
+      />
     </div>
   );
 };
