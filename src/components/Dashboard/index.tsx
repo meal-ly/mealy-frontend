@@ -3,6 +3,7 @@ import { useSelector as useMappedState } from "react-redux";
 import { IAppState } from "../../store/types";
 import "./styles.scss";
 import Tags from "./components/Tags";
+import RecipeCard from "./components/RecipeCard";
 
 const Dashboard = () => {
   const [search, setSearch] = React.useState("");
@@ -18,6 +19,9 @@ const Dashboard = () => {
         value={search}
         placeholder="Busca aquí la receta que viste el otro día :)"
       />
+      <div className="recipes-grid container">
+        <RecipeCard />
+      </div>
     </div>
   );
 };
