@@ -7,7 +7,7 @@ const RecipeCard = () => {
   return (
     <div className="recipe-card">
       <img
-        src="/assets/recipe.png"
+        src="/assets/recipe.jpg"
         alt="recipe-image"
       />
       <div className="recipe-details column">
