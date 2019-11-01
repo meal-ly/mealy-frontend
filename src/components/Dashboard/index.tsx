@@ -3,6 +3,7 @@ import { useComponentState } from "./hooks";
 import "./styles.scss";
 import Tags from "./components/Tags";
 import RecipeCard from "./components/RecipeCard";
+import Loading from "../Common/Loading";
 
 const Dashboard = () => {
   const [search, setSearch] = React.useState("");
@@ -12,10 +13,6 @@ const Dashboard = () => {
     fetchRecipes();
   }, [recipes],
   );
-
-  if (isLoadingRecipes) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div className="container column dashboard">
@@ -30,7 +27,10 @@ const Dashboard = () => {
         placeholder="Busca aquí la receta que viste el otro día :)"
       />
       <div className="recipes-grid container">
-        {recipes && recipes.map((recipe) =>
+        {isLoadingRecipes &&
+          <Loading />
+        }
+        {!isLoadingRecipes && recipes && recipes.map((recipe) =>
           <RecipeCard recipe={recipe} />,
         )}
       </div>
