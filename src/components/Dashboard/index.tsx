@@ -14,10 +14,6 @@ const Dashboard = () => {
   }, [recipes],
   );
 
-  if (isLoadingRecipes) {
-    return <Loading />;
-  }
-
   return (
     <div className="container column dashboard">
       <h2 className="title">
@@ -31,7 +27,10 @@ const Dashboard = () => {
         placeholder="Busca aquí la receta que viste el otro día :)"
       />
       <div className="recipes-grid container">
-        {recipes && recipes.map((recipe) =>
+        {isLoadingRecipes &&
+          <Loading />
+        }
+        {!isLoadingRecipes && recipes && recipes.map((recipe) =>
           <RecipeCard recipe={recipe} />,
         )}
       </div>
