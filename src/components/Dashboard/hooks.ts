@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useDispatch, useSelector as useMappedState } from "react-redux";
-import * as actions from "../../store/dashboard/actions";
+import * as dashboardActions from "../../store/dashboard/actions";
+import * as recipesActions from "../../store/recipes/actions";
 import { IAppState, MealyDispatch } from "../../store/types";
 import { Tags } from "./types";
 
@@ -12,9 +13,13 @@ export const useComponentState = () => ({
 const useSelectors = () =>
   useMappedState((state: IAppState) => {
     const tag = state.dashboard.tag;
+    const recipes = state.recipes.recipes;
+    const isLoadingRecipes = state.recipes.isLoadingRecipes;
     return {
       tag,
-    }
+      recipes,
+      isLoadingRecipes,
+    };
   });
 
 const useActions = () => {
@@ -22,7 +27,8 @@ const useActions = () => {
   return React.useMemo(
     () => ({
       selectTag: (tag: Tags) =>
-        dispatch(actions.selectTag(tag)),
+        dispatch(dashboardActions.selectTag(tag)),
+      fetchRecipes: () => dispatch(recipesActions.fetchRecipes()),
     }),
     [dispatch],
   );

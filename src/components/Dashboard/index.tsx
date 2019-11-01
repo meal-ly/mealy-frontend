@@ -1,12 +1,22 @@
 import * as React from "react";
-import { useSelector as useMappedState } from "react-redux";
-import { IAppState } from "../../store/types";
+import { useComponentState } from "./hooks";
 import "./styles.scss";
 import Tags from "./components/Tags";
 import RecipeCard from "./components/RecipeCard";
 
 const Dashboard = () => {
   const [search, setSearch] = React.useState("");
+  const { fetchRecipes, isLoadingRecipes, recipes } = useComponentState();
+
+  React.useEffect(() => {
+    fetchRecipes();
+  }, [recipes],
+  );
+
+  if (isLoadingRecipes) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="container column dashboard">
       <h2 className="title">
@@ -20,7 +30,9 @@ const Dashboard = () => {
         placeholder="Busca aquí la receta que viste el otro día :)"
       />
       <div className="recipes-grid container">
-        <RecipeCard />
+        {recipes && recipes.map((recipe) =>
+          <RecipeCard recipe={recipe} />,
+        )}
       </div>
     </div>
   );

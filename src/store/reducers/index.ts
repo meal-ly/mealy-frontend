@@ -3,12 +3,13 @@ import { History } from "history";
 import { combineReducers } from "redux";
 import profileReducer from "../profile/reducer";
 import dashboardReducer from "../dashboard/reducer";
+import recipesReducer from "../recipes/reducer";
 
 const buildRootReducer = (history: History) =>
   combineReducers({
     profile: profileReducer,
     dashboard: dashboardReducer,
-    // recipes: recipesReducer,
+    recipes: recipesReducer,
     router: connectRouter(history),
   });
 
