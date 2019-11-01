@@ -4,9 +4,13 @@ import { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "typescript-fsa";
 
 import { IProfileReducerState } from "./profile/types";
+import { IDashboardReducerState } from "./dashboard/types";
+import { IRecipesReducerState } from "./recipes/types";
 
 export interface IAppState {
   profile: IProfileReducerState;
+  dashboard: IDashboardReducerState;
+  recipes: IRecipesReducerState;
   router: RouterState;
 }
 

@@ -1,0 +1,32 @@
+.tag-selector {
+  width: 468px;
+  margin: 51px 0 32px 0;
+  justify-content: space-between !important;
+}
+
+.tag-button {
+  width: 108px;
+  height: 24px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  box-shadow: 0px 0px 2px #00000029;
+  border-radius: 17px;
+  color: var(--red);
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: 500;
+  transition: .2s;
+  will-change:transform;
+
+  &:active {
+    transform: scale(.9);
+  }
+
+  &.selected {
+    background-color: var(--red);
+    color: var(--white);
+    box-shadow: 1px 4px 7px #84000082;
+  }
+}
