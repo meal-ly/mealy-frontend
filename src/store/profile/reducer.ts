@@ -3,7 +3,7 @@ import { IProfileReducerState } from "./types";
 import { fetchProfile } from "./actions";
 
 const initialState: IProfileReducerState = {
-  isLoggedIn: true,
+  isLoggedIn: false,
   isLoadingProfile: false,
   user: undefined,
 };
