@@ -3,6 +3,7 @@ import { useComponentState } from "./hooks";
 import "./styles.scss";
 import Tags from "./components/Tags";
 import RecipeCard from "./components/RecipeCard";
+import Loading from "../Common/Loading";
 
 const Dashboard = () => {
   const [search, setSearch] = React.useState("");
@@ -14,7 +15,7 @@ const Dashboard = () => {
   );
 
   if (isLoadingRecipes) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (
