@@ -4,7 +4,7 @@ import "./styles.scss";
 interface IButtonProps {
   children: string;
   variant: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = ({ children, variant, onClick }: IButtonProps) =>

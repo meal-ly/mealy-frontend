@@ -1,5 +1,6 @@
 import * as React from "react";
 import Button from "../../Common/Button/";
+import { Link } from "react-router-dom";
 import "../styles.scss";
 
 interface IPlanCard {
@@ -19,9 +20,11 @@ const PlanCard = ({ imgUrl, title, text }: IPlanCard) =>
       <p className="title-small">{title}</p>
       <p className="text-small">{text}</p>
     </div>
-    <Button variant="rounded" onClick={() => null}>
-      Inicia tu plan
-    </Button>
+    <Link to="/register">
+      <Button variant="rounded" >
+        Inicia tu plan
+      </Button>
+    </Link>
   </div>;
 
 export default PlanCard;
