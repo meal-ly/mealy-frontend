@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { IHeaderProps} from "./types";
 import Enter from "../Icons/Enter";
 import User from "../Icons/User";
@@ -17,7 +17,7 @@ const noAuthLiknks = [
   {
     text: "Login",
     icon: <Enter />,
-    link: "/login",
+    route: "/login",
   },
 ];
 
@@ -25,7 +25,7 @@ const authLiknks = [
   {
     text: "Profile",
     icon: <User width={17.68} height={19.24} />,
-    link: "/profile",
+    route: "/profile",
   },
 ];
 
@@ -43,17 +43,17 @@ const Header = ({ location }: IHeaderProps) => {
 
   return (
     <header className="row container">
-      <NavLink to="/" className="row">
+      <Link to="/" className="row">
         <img
           src="/assets/logo_small.png"
           alt="logo"
           width="150"
         />
-      </NavLink>
+      </Link>
       <div className="header-links row">
         {links.map((link) => {
           return (
-            <NavLink to={link.link} className="row link-container" >
+            <NavLink key={link.text} to={link.route} className="row link-container" >
               {link.icon}
               <p>{link.text}</p>
             </NavLink>
