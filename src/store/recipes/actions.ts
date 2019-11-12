@@ -58,7 +58,7 @@ const fakeRecipes = [
 ];
 
 export const fetchRecipes = createAsyncAction<void, Recipe[], Error>(
-  "FETCH_PROFILE",
+  "FETCH_RECIPES",
   async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     return fakeRecipes;

@@ -3,15 +3,18 @@ import UserIcon from "../../../Icons/User";
 import HeartIcon from "../../../Icons/Heart";
 import "./styles.scss";
 import { IRecipeProps } from "./types";
+import { Link } from "react-router-dom";
 
 const RecipeCard = (props: IRecipeProps) => {
   const { recipe } = props;
   return (
     <div className="recipe-card">
-      <img
-        src={recipe.imgUrl}
-        alt="recipe-image"
-      />
+      <Link to={`/recipe/${recipe.id}`}>
+        <img
+          src={recipe.imgUrl}
+          alt="recipe-image"
+        />
+      </Link>
       <div className="recipe-details column">
         <h3>{recipe.title}</h3>
         <div className="recipe-details-info row">
