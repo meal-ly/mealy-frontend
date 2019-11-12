@@ -18,7 +18,6 @@ const fakeRecipe = {
 export const fetchRecipe = createAsyncAction<string, Recipe, Error>(
   "FETCH_RECIPE",
   async (recipeId: string) => {
-    console.log(recipeId);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     return fakeRecipe;
 });

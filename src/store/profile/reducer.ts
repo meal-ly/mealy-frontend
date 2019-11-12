@@ -1,14 +1,22 @@
 import { reducerWithInitialState } from "typescript-fsa-reducers";
 import { IProfileReducerState } from "./types";
-import { fetchProfile } from "./actions";
+import { fetchProfile, login, logout } from "./actions";
 
 const initialState: IProfileReducerState = {
-  isLoggedIn: true,
+  isLoggedIn: false,
   isLoadingProfile: false,
   user: undefined,
 };
 
 const profileReducer = reducerWithInitialState(initialState)
+  .case(login, (state) => ({
+    ...state,
+    isLoggedIn: true,
+  }))
+  .case(logout, (state) => ({
+    ...state,
+    isLoggedIn: false,
+  }))
   .case(fetchProfile.async.started, (state) => ({
     ...state,
     isLoadingProfile: true,
@@ -22,7 +30,6 @@ const profileReducer = reducerWithInitialState(initialState)
     return {
       ...state,
       isLoadingProfile: false,
-      isLoggedIn: true,
       user,
     };
   });

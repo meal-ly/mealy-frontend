@@ -4,19 +4,19 @@ import { ILoginRequest } from "./types";
 import { Formik } from "formik";
 import Button from "../Common/Button/";
 import { useDispatch } from "react-redux";
-import { fetchProfile } from "../../store/profile/actions";
+import { login } from "../../store/profile/actions";
 
 const dispatcher = (dispatch: React.Dispatch<any>) => ({
-  login: (params: ILoginRequest) =>
-    dispatch(fetchProfile.action(params)),
+  loginAction: () =>
+    dispatch(login()),
 });
 
 const LoginForm = () => {
-  const { login } = dispatcher(useDispatch());
+  const { loginAction } = dispatcher(useDispatch());
 
   const handleLogin = (values: ILoginRequest) => {
     // TODO: Wire up Login
-    login(values);
+    loginAction();
   };
 
   return (
