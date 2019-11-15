@@ -7,7 +7,7 @@ const HowItWorks = () =>
     <h2 className="title">¿Cómo funciona?</h2>
     <div className="row step-details">
       <StepDetail
-        imgUrl="/assets/dummy2.png"
+        imgUrl="/assets/p4.png"
         title="Selecciona tu receta"
         text="Escoge una de las cientos de recetas que tenemos listas para ti"
       />
