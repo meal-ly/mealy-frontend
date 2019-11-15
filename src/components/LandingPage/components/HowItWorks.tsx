@@ -12,17 +12,17 @@ const HowItWorks = () =>
         text="Escoge una de las cientos de recetas que tenemos listas para ti"
       />
       <StepDetail
-        imgUrl="/assets/dummy2.png"
+        imgUrl="/assets/p1.png"
         title="Recibe tus ingredientes"
         text="Te enviamos los ingredientes que necesitas para tu receta"
       />
       <StepDetail
-        imgUrl="/assets/dummy2.png"
+        imgUrl="/assets/p2.png"
         title="Prepara tu receta"
         text="Sigue paso a paso la receta y conviértete en un chef"
       />
       <StepDetail
-        imgUrl="/assets/dummy2.png"
+        imgUrl="/assets/p3.png"
         title="!Disfruta!"
         text="Ya esta todo listo, !Disfruta tu comida!"
       />

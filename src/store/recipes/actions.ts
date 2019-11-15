@@ -2,6 +2,7 @@ import actionCreatorFactory from "typescript-fsa";
 import { asyncFactory } from "typescript-fsa-redux-thunk";
 import { IAppState } from "../types";
 import { Recipe } from "../../components/Dashboard/components/RecipeCard/types";
+import axios from "axios";
 
 const createAction = actionCreatorFactory("RECIPES");
 const createAsyncAction = asyncFactory<IAppState>(createAction);
@@ -60,6 +61,6 @@ const fakeRecipes = [
 export const fetchRecipes = createAsyncAction<void, Recipe[], Error>(
   "FETCH_RECIPES",
   async () => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    return fakeRecipes;
+    const response  = await axios.get("http://localhost:3001/api/recipes/");
+    return response.data.data;
 });

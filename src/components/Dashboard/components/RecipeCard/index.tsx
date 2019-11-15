@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 const RecipeCard = (props: IRecipeProps) => {
   const { recipe } = props;
   return (
-    <div className="recipe-card">
-      <Link to={`/recipe/${recipe.id}`}>
+    <div className="recipe-card" >
+      <Link to={`/recipe/${recipe._id}`}>
         <img
           src={recipe.imgUrl}
           alt="recipe-image"
@@ -20,7 +20,7 @@ const RecipeCard = (props: IRecipeProps) => {
         <div className="recipe-details-info row">
           <div className="recipe-time row">
             <HeartIcon />
-            <p className="recipe-card-text">{recipe.time}</p>
+            <p className="recipe-card-text">{recipe.time.number}</p>
           </div>
           <div className="recipe-people row">
             <UserIcon width={12.17} height={13.24} />
