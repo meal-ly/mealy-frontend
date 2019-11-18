@@ -12,6 +12,7 @@ export interface Recipe {
   title: string;
   imgUrl: string;
   description: string;
+  instructions: string;
   tag: string;
   time: {
     number: number,

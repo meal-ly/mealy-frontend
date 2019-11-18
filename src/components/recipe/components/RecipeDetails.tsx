@@ -36,6 +36,18 @@ const RecipeDetails = (props: IRecipeDetailsProps) => {
           <p className="recipe-numbers-text">{recipe.likes}</p>
         </div>
       </div>
+      <section className="recipe-section column">
+        <h2>Ingredientes</h2>
+        <p>Selecciona los ingredientes que te hagan falta y te los enviaremos a tu casa.</p>
+      </section>
+      <section className="recipe-section column">
+        <h2>Preparación</h2>
+        <p>{recipe.instructions}</p>
+      </section>
+      <section className="recipe-section column" style={{border: "none"}}>
+        <h2>Emplatado</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nYkhg_lD4nE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </section>
     </div>
   );
 };
