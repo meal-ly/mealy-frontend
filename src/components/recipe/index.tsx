@@ -2,6 +2,7 @@ import * as React from "react";
 import { useComponentState } from "./hooks";
 import "./styles.scss";
 import Loading from "../Common/Loading";
+import RecipeDetails from "./components/RecipeDetails";
 
 const Recipe = (props: any) => {
   const recipeId = props.match.params.recipeId;
@@ -19,9 +20,7 @@ const Recipe = (props: any) => {
         <Loading />
       }
       {!isLoadingRecipe && recipe &&
-        <div>
-          Recipe Details
-        </div>
+        <RecipeDetails recipe={recipe} />
       }
     </div>
   );
