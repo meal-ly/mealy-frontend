@@ -7,60 +7,9 @@ import axios from "axios";
 const createAction = actionCreatorFactory("RECIPES");
 const createAsyncAction = asyncFactory<IAppState>(createAction);
 
-const fakeRecipes = [
-  {
-    id: "1",
-    title: "Bocados de tostadas Gourmet",
-    imgUrl: "/assets/recipe.jpg",
-    likes: 3,
-    people: 4,
-    time: "30 min",
-  },
-  {
-    id: "2",
-    title: "Bocados de tostadas Gourmet",
-    imgUrl: "/assets/recipe.jpg",
-    likes: 3,
-    people: 4,
-    time: "30 min",
-  },
-  {
-    id: "2",
-    title: "Bocados de tostadas Gourmet",
-    imgUrl: "/assets/recipe.jpg",
-    likes: 3,
-    people: 4,
-    time: "30 min",
-  },
-  {
-    id: "4",
-    title: "Bocados de tostadas Gourmet",
-    imgUrl: "/assets/recipe.jpg",
-    likes: 3,
-    people: 4,
-    time: "30 min",
-  },
-  {
-    id: "5",
-    title: "Bocados de tostadas Gourmet",
-    imgUrl: "/assets/recipe.jpg",
-    likes: 3,
-    people: 4,
-    time: "30 min",
-  },
-  {
-    id: "6",
-    title: "Bocados de tostadas Gourmet",
-    imgUrl: "/assets/recipe.jpg",
-    likes: 3,
-    people: 4,
-    time: "30 min",
-  },
-];
-
 export const fetchRecipes = createAsyncAction<void, Recipe[], Error>(
   "FETCH_RECIPES",
   async () => {
-    const response  = await axios.get("http://localhost:3001/api/recipes/");
+    const response  = await axios.get("https://mealy.now.sh/api/recipes/");
     return response.data.data;
 });
