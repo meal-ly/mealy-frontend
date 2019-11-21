@@ -33,6 +33,7 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "typescript-fsa": "^3.0.0",
     "typescript-fsa-reducers": "^1.2.1",
     "typescript-fsa-redux-thunk": "^2.1.7",
