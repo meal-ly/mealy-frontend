@@ -7,7 +7,7 @@ import Loading from "../Common/Loading";
 
 const Dashboard = () => {
   const [search, setSearch] = React.useState("");
-  const { fetchRecipes, isLoadingRecipes, recipes } = useComponentState();
+  const { fetchRecipes, isLoadingRecipes, recipes, tag } = useComponentState();
 
   React.useEffect(() => {
     fetchRecipes();
@@ -26,7 +26,7 @@ const Dashboard = () => {
         value={search}
         placeholder="Busca aquí la receta que viste el otro día :)"
       />
-      <div className="recipes-grid container">
+      <div key={tag} className="recipes-grid container">
         {isLoadingRecipes &&
           <Loading />
         }

@@ -1,3 +1,5 @@
+import { Tags } from "../../types";
+
 export interface Ingredients {
   name: string;
   quantity: {
@@ -13,7 +15,7 @@ export interface Recipe {
   imgUrl: string;
   description: string;
   instructions: string;
-  tag: string;
+  tag: Tags;
   time: {
     number: number,
     unit: string,

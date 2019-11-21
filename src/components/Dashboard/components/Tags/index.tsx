@@ -8,8 +8,8 @@ const Tags = () => {
     <div className="row tag-selector">
       <TagButton>{Tag.desayuno}</TagButton>
       <TagButton>{Tag.almuerzo}</TagButton>
-      <TagButton>{Tag.cena}</TagButton>
       <TagButton>{Tag.snack}</TagButton>
+      <TagButton>{Tag.all}</TagButton>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { selectTag } from "./actions";
 import { Tags } from "../../components/Dashboard/types";
 
 const initialState: IDashboardReducerState = {
-  tag: Tags.almuerzo,
+  tag: Tags.all,
 };
 
 const dashboardReducer = reducerWithInitialState(initialState)

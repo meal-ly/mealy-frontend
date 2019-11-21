@@ -30,8 +30,18 @@
 .recipes-grid{
   width: 100%;
   padding: 35px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  animation: animationIn .5s ease-in forwards;
+}
+
+@keyframes animationIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
