@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { fetchProfile } from "../../store/profile/actions";
 import { useSelector as useMappedState } from "react-redux";
 import { IAppState } from "../../store/types";
+import ProfileDetails from "./ProfileDetails";
 
 const dispatcher = (dispatch: React.Dispatch<any>) => ({
   fetchUserInfo: () =>
@@ -33,9 +34,7 @@ const Profile = () => {
         <Loading />
       }
       {!isLoadingProfile && profile &&
-        <div>
-          Profile Details
-        </div>
+        <ProfileDetails profile={profile} />
       }
     </div>
   );
