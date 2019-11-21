@@ -12,7 +12,7 @@ const StepDetail = ({ imgUrl, title, text }: IStepDetailProps) =>
     <img
       src={imgUrl}
       alt={title}
-      width="137"
+      height="137"
     />
     <p className="title-small">{title}</p>
     <p className="text-small">{text}</p>

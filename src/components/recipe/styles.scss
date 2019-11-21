@@ -1,0 +1,97 @@
+.recipe-page {
+  margin-bottom: 50px;
+  img {
+    width: 100%;
+    height: 261px;
+  }
+  h1{
+    font-family: 'Montserrat';
+    color: #343434;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 34px 0  20px 0;
+  }
+  .numbers {
+    width: 100%;
+    border-top: 1px solid var(--red);
+    padding-top: 13px;
+    .recipe-time{
+      width: 90px;
+      height: 28px;
+      border-right: 1px solid #B8B8B873;
+    }
+    .recipe-people{
+      width: 90px;
+      height: 28px;
+      border-right: 1px solid #B8B8B873;
+      svg{
+        fill: var(--red);
+      }
+    }
+    .recipe-likes{
+      width: 90px;
+      height: 28px;
+    }
+    .recipe-numbers-text{
+      font-family: 'Montserrat';
+      color: #676767;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0 0 0 16px;
+    }
+  }
+  .back-link-container {
+    height: 24px;
+    margin: 0 0 25px 0;
+    a {
+      text-decoration: none;
+    } 
+    p {
+      transition: 0.3s;
+      color: var(--red);
+      margin: 0;
+      font-family: 'Raleway';
+      font-weight: 400;
+      font-size: 16px;
+    }
+    svg {
+      fill: var(--red);
+      transition: 0.3s;
+      margin-right: 5px;
+    }
+    &:hover {
+      p {
+        color: var(--green);
+      }
+      svg {
+        fill: var(--green);
+      }
+    }
+  }
+}
+
+.recipe-section {
+  width: 100%;
+  border-bottom: 1px solid var(--red);
+  padding: 0px 100px;
+  margin: 45px 0 0;
+  padding-bottom: 30px;
+  align-items: flex-start !important;
+  h2 {
+    color: var(--red);
+    margin: 0;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 33px;
+  }
+  p {
+    font-family: 'Montserrat';
+    color: var(--gray);
+    font-size: 17px;
+    font-weight: 400;
+  }
+  iframe {
+    margin: 20px 0;
+    align-self: center;
+  }
+}

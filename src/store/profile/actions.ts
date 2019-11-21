@@ -15,7 +15,10 @@ const fakeUser = {
   address: "Calle 154 #17-33",
 };
 
-export const fetchProfile = createAsyncAction<ILoginRequest, IUserProfile, Error>(
+export const login = createAction("LOGIN");
+export const logout = createAction("LOGOUT");
+
+export const fetchProfile = createAsyncAction<void, IUserProfile, Error>(
   "FETCH_PROFILE",
   async () => {
     await new Promise((resolve) => setTimeout(resolve, 500));

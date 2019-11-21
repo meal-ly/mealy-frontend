@@ -9,6 +9,8 @@ import Register from "../components/Register";
 import NotFound from "../components/NotFound";
 import { IAppState } from "../store/types";
 import { useSelector as useMappedState } from "react-redux";
+import Recipe from "../components/recipe";
+import Profile from "../components/Profile";
 
 const selector = (state: IAppState) => {
   return {
@@ -28,6 +30,8 @@ export const useSessionRoutes = () => {
     if (isAuthenticated) {
       routes.push(
         <Route key={nextkey()} exact path="/" component={Dashboard} />,
+        <Route key={nextkey()} exact path="/recipe/:recipeId" component={Recipe} />,
+        <Route key={nextkey()} exact path="/profile" component={Profile} />,
         <Redirect key={nextkey()} to="/" />,
       );
     } else {

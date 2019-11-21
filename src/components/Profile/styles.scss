@@ -1,0 +1,72 @@
+.profile {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  img{
+    width: 132px;
+  }
+  h2 {
+    color: var(--red);
+    margin: 15px 0 0px 0;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 33px;
+  }
+  p {
+    font-family: 'Montserrat';
+    color: var(--gray);
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .plan{
+    color: var(--red);
+    margin: 0;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 16px;
+  }
+  button{
+    width: 200px;
+    margin: 23px 0;
+  }
+  hr{
+    width: 70vw;
+    margin: 10px 0;
+  }
+}
+
+.profile-data{
+  width: 354px;
+  align-items: flex-start !important;
+
+  .profile-data-label{
+    font-family: 'Montserrat';
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+  }
+  .profile-data-text{
+    font-family: 'Montserrat';
+    color: var(--red);
+    font-size: 17px;
+    font-weight: 400;
+    margin: 8px 0px 3px 5px;
+  }
+  hr{
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  img{
+    margin: 20px 0;
+    width: 354px;
+  }
+  .edit-card-container{
+    width: 100%;
+    justify-content: space-around !important;
+    cursor: pointer;
+    p:last-child{
+      color: var(--red);
+    }
+  }
+}

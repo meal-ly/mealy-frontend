@@ -4,11 +4,10 @@ import { fetchRecipes } from "./actions";
 
 const initialState: IRecipesReducerState = {
   recipes: null,
-  selectedRecipe: undefined,
   isLoadingRecipes: false,
 };
 
-const profileReducer = reducerWithInitialState(initialState)
+const recipesReducer = reducerWithInitialState(initialState)
   .case(fetchRecipes.async.started, (state) => ({
     ...state,
     isLoadingRecipes: true,
@@ -26,4 +25,4 @@ const profileReducer = reducerWithInitialState(initialState)
     };
   });
 
-export default profileReducer;
+export default recipesReducer;

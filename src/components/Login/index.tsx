@@ -1,22 +1,9 @@
 import * as React from "react";
 import "./styles.scss";
 import LoginForm from "./LoginForm";
-import { Link, Redirect } from "react-router-dom";
-import { useSelector as useMappedState } from "react-redux";
-import { IAppState } from "../../store/types";
-
-const selector = (state: IAppState) => {
-  return {
-    isAuthenticated: state.profile.isLoggedIn,
-  };
-};
+import { Link } from "react-router-dom";
 
 const Login = () => {
-  const { isAuthenticated } = useMappedState(selector);
-
-  // if (isAuthenticated) {
-  //   return <Redirect to="/" />;
-  // }
 
   return (
     <div className="login-container">

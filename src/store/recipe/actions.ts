@@ -4,12 +4,12 @@ import { IAppState } from "../types";
 import { Recipe } from "../../components/Dashboard/components/RecipeCard/types";
 import axios from "axios";
 
-const createAction = actionCreatorFactory("RECIPES");
+const createAction = actionCreatorFactory("RECIPE");
 const createAsyncAction = asyncFactory<IAppState>(createAction);
 
-export const fetchRecipes = createAsyncAction<void, Recipe[], Error>(
-  "FETCH_RECIPES",
-  async () => {
-    const response  = await axios.get("https://mealy.now.sh/api/recipes/");
+export const fetchRecipe = createAsyncAction<string, Recipe, Error>(
+  "FETCH_RECIPE",
+  async (recipeId: string) => {
+    const response  = await axios.get(`https://mealy.now.sh/api/recipes/${recipeId}`);
     return response.data.data;
 });

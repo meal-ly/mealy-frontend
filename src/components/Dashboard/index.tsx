@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   React.useEffect(() => {
     fetchRecipes();
-  }, [recipes],
+  }, [],
   );
 
   return (
@@ -30,8 +30,9 @@ const Dashboard = () => {
         {isLoadingRecipes &&
           <Loading />
         }
-        {!isLoadingRecipes && recipes && recipes.map((recipe) =>
-          <RecipeCard recipe={recipe} />,
+        {!isLoadingRecipes && recipes &&
+          recipes.map((recipe) =>
+            <RecipeCard recipe={recipe} key={recipe._id} />,
         )}
       </div>
     </div>
