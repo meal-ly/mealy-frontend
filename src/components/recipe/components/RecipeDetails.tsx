@@ -3,6 +3,7 @@ import { Recipe } from "../../Dashboard/components/RecipeCard/types";
 import { NavLink } from "react-router-dom";
 import UserIcon from "../../Icons/User";
 import HeartIcon from "../../Icons/Heart";
+import TimeIcon from "../../Icons/Time";
 import Enter from "../../Icons/Enter";
 import Button from "../../Common/Button";
 
@@ -25,7 +26,7 @@ const RecipeDetails = (props: IRecipeDetailsProps) => {
       <h1>{recipe.title}</h1>
       <div className="numbers row">
         <div className="recipe-time row">
-          <HeartIcon />
+          <TimeIcon />
           <p className="recipe-numbers-text">{recipe.time.number}</p>
         </div>
         <div className="recipe-people row">

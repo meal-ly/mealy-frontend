@@ -1,6 +1,7 @@
 import * as React from "react";
 import UserIcon from "../../../Icons/User";
 import HeartIcon from "../../../Icons/Heart";
+import TimeIcon from "../../../Icons/Time";
 import "./styles.scss";
 import { IRecipeProps } from "./types";
 import { Link } from "react-router-dom";
@@ -19,7 +20,7 @@ const RecipeCard = (props: IRecipeProps) => {
         <h3>{recipe.title}</h3>
         <div className="recipe-details-info row">
           <div className="recipe-time row">
-            <HeartIcon />
+            <TimeIcon />
             <p className="recipe-card-text">{recipe.time.number}</p>
           </div>
           <div className="recipe-people row">
