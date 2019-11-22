@@ -9,7 +9,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-card column">
         <img
-          src="/assets/dummy3.png"
+          src="/assets/mealy.png"
           alt="login_img"
           width="96"
         />

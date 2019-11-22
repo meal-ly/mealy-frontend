@@ -94,4 +94,26 @@
     margin: 20px 0;
     align-self: center;
   }
+  button {
+    margin: 35px auto 0 auto;
+  }
+}
+
+.ingredients-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 35px;
+  grid-row-gap: 35px;
+  .ingredient {
+    justify-content: flex-start !important;
+  }
+  .checkbox {
+    margin: 0 5px 0 0;
+  }
+  label {
+    font-family: 'Montserrat';
+    color: var(--gray);
+    font-size: 15px;
+    font-weight: 400;
+  }
 }

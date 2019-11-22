@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import UserIcon from "../../Icons/User";
 import HeartIcon from "../../Icons/Heart";
 import Enter from "../../Icons/Enter";
+import Button from "../../Common/Button";
 
 interface IRecipeDetailsProps {
   recipe: Recipe;
@@ -39,6 +40,21 @@ const RecipeDetails = (props: IRecipeDetailsProps) => {
       <section className="recipe-section column">
         <h2>Ingredientes</h2>
         <p>Selecciona los ingredientes que te hagan falta y te los enviaremos a tu casa.</p>
+        <div className="ingredients-container">
+          { recipe.ingredients.map((ingredient) => {
+            return (
+              <div className="ingredient row"  key={ingredient.name}>
+                <input type="checkbox" className="checkbox" value={ingredient.name} />
+                <label>
+                  {`${ingredient.quantity.number} ${ingredient.quantity.unit} ${ingredient.quantity.unit.length > 0 ? "de" : ""} ${ingredient.name}`}
+                </label>
+              </div>
+            );
+          })}
+        </div>
+        <Button variant="rounded" >
+          Pedir ingredientes
+        </Button>
       </section>
       <section className="recipe-section column">
         <h2>Preparación</h2>
