@@ -20,7 +20,7 @@ const RecipeDetails = (props: IRecipeDetailsProps) => {
         <p>Volver al dashboard</p>
       </NavLink>
       <img
-        src={recipe.imgUrl}
+        src="/assets/cooking.png"
         alt="recipe-pic"
       />
       <h1>{recipe.title}</h1>
