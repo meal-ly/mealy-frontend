@@ -39,7 +39,7 @@ export const useSessionRoutes = () => {
         <Route key={nextkey()} exact path="/" component={LandingPage} />,
         <Route key={nextkey()} exact path="/login" component={Login} />,
         <Route key={nextkey()} exact path="/register" component={Register} />,
-        <Route key={nextkey()} component={NotFound} />,
+        <Redirect key={nextkey()} to="/" />,
       );
     }
     return routes;
