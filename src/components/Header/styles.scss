@@ -22,6 +22,8 @@ header {
 
   .link-container {
     height: 24px;
+    margin-right: 12px;
+    cursor: pointer;
   }
 
   .link-container:hover {
@@ -32,8 +34,4 @@ header {
       fill: var(--green);
     }
   }
-}
-
-.header-links{
-  
 }

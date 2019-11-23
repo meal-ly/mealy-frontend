@@ -26,10 +26,12 @@ const Dashboard = () => {
         value={search}
         placeholder="Busca aquí la receta que viste el otro día :)"
       />
-      <div key={tag} className="recipes-grid container">
-        {isLoadingRecipes &&
+      {isLoadingRecipes &&
+        <div className="container row loading-container">
           <Loading />
+        </div>
         }
+      <div key={tag} className="recipes-grid container">
         {!isLoadingRecipes && recipes &&
           recipes.map((recipe) =>
             <RecipeCard recipe={recipe} key={recipe._id} />,
