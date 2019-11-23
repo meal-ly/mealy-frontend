@@ -15,10 +15,14 @@
     - [SVG Handling](#svg-handling)
     - [Reducers and actions creation flow.](#reducers-and-actions-creation-flow)
     - [Asynchronous request/actions handling](#asynchronous-request/actions-handling)
-  - [Build](#build)
+  - [Build & deploy](#build-&-deploy)
 
 ## Project Details
 Mealy is an app that provides incredible recipes for every occasion. Users can log in and found thousands of recipes for breakfast, lunch, snacks etc.
+
+Watch the application alive at: https://mealy-fjc.web.app/
+
+Just hit login and then login with dummy data and you're in :)
 
 This repo, contains the frontend application. If you wan to see our backend application, please refer to: https://github.com/meal-ly/mealy-backend
 
@@ -26,9 +30,9 @@ This proyect was built based on Scrum. If you want to see our Kanban board, plea
 
 Here's how the app looks like. If you wan to see full design files, please refer to: https://xd.adobe.com/spec/b9894355-0620-4863-62e9-8ee3421f5749-cfb8/
 
-![Screenshot_2019-11-22 Mealy](https://user-images.githubusercontent.com/21111451/69455933-75dcfa00-0d37-11ea-9bb7-19ae67c259cf.png)
+![Screenshot_2019-11-22 Mealy(1)](https://user-images.githubusercontent.com/21111451/69470197-08df5980-0d63-11ea-9090-de510270cf73.png)
 
-![Screenshot_2019-11-22 Mealy](https://user-images.githubusercontent.com/21111451/69455640-d61f6c00-0d36-11ea-995a-b3af22d344c8.jpg)
+![Screenshot_2019-11-22 Mealy(1)](https://user-images.githubusercontent.com/21111451/69470279-7ab7a300-0d63-11ea-962e-c69b7e068bf0.jpg)
 
 ## Technical Details
 ### Dependencies
@@ -87,10 +91,11 @@ The libraries **typescript-fsa-reducers**, **typescript-fsa-redux-thunk** and **
 3. Register the reducer state's interface in the **store/types** file and add your reducer to **store/reducers/index**.
 
 
-### Build
+### Build & Deploy
 ```sh
 yarn build # Build the project and create production files
+firebase deploy # Deploy dist folder to prod server
 ```
 
-Production files will be on `dist` folder
+Production files will be on `dist` folder. 
 
