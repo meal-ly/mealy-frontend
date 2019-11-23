@@ -3,7 +3,9 @@ import { Recipe } from "../../Dashboard/components/RecipeCard/types";
 import { NavLink } from "react-router-dom";
 import UserIcon from "../../Icons/User";
 import HeartIcon from "../../Icons/Heart";
+import TimeIcon from "../../Icons/Time";
 import Enter from "../../Icons/Enter";
+import Button from "../../Common/Button";
 
 interface IRecipeDetailsProps {
   recipe: Recipe;
@@ -18,13 +20,13 @@ const RecipeDetails = (props: IRecipeDetailsProps) => {
         <p>Volver al dashboard</p>
       </NavLink>
       <img
-        src={recipe.imgUrl}
+        src="/assets/cooking.png"
         alt="recipe-pic"
       />
       <h1>{recipe.title}</h1>
       <div className="numbers row">
         <div className="recipe-time row">
-          <HeartIcon />
+          <TimeIcon />
           <p className="recipe-numbers-text">{recipe.time.number}</p>
         </div>
         <div className="recipe-people row">
@@ -39,6 +41,21 @@ const RecipeDetails = (props: IRecipeDetailsProps) => {
       <section className="recipe-section column">
         <h2>Ingredientes</h2>
         <p>Selecciona los ingredientes que te hagan falta y te los enviaremos a tu casa.</p>
+        <div className="ingredients-container">
+          { recipe.ingredients.map((ingredient) => {
+            return (
+              <div className="ingredient row"  key={ingredient.name}>
+                <input type="checkbox" className="checkbox" value={ingredient.name} />
+                <label>
+                  {`${ingredient.quantity.number} ${ingredient.quantity.unit} ${ingredient.quantity.unit.length > 0 ? "de" : ""} ${ingredient.name}`}
+                </label>
+              </div>
+            );
+          })}
+        </div>
+        <Button variant="rounded" >
+          Pedir ingredientes
+        </Button>
       </section>
       <section className="recipe-section column">
         <h2>Preparación</h2>

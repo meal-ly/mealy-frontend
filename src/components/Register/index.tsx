@@ -8,7 +8,7 @@ const Login = () => {
     <div className="login-container">
       <div className="register-card column">
         <img
-          src="/assets/dummy3.png"
+          src="/assets/mealy.png"
           alt="login_img"
           width="96"
         />
